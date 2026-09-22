@@ -27,7 +27,7 @@ collision_layer = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1456881412]
 unique_name_in_owner = true
 sprite_frames = ExtResource("1_hj6il")
-animation = &"idle"
+animation = &"annoy"
 autoplay = "idle"
 offset = Vector2(4, -14)
 
@@ -70,12 +70,14 @@ debug_color = Color(0.6, 0.545, 0, 0.42)
 stream = SubResource("AudioStreamRandomizer_3vki4")
 bus = &"SFX"
 
-[node name="PetInteraction" type="Node" parent="." unique_id=1162035923 node_paths=PackedStringArray("interact_area", "sound_effect_player", "shaker", "fact_counter")]
+[node name="PetInteraction" type="Node" parent="." unique_id=1162035923 node_paths=PackedStringArray("interact_area", "sound_effect_player", "shaker", "fact_counter", "pet_animation", "pet_sprite_behavior")]
 script = ExtResource("4_pcfmk")
 interact_area = NodePath("../InteractArea")
 sound_effect_player = NodePath("../AudioStreamPlayer2D")
 shaker = NodePath("../AnimatedSprite2D/Shaker")
 fact_counter = NodePath("../FactCounter")
+pet_animation = NodePath("../AnimatedSprite2D")
+pet_sprite_behavior = NodePath("../AnimatedSprite2D/CharacterSpriteBehavior")
 
 [node name="FactCounter" type="Node" parent="." unique_id=2116673480]
 script = ExtResource("7_1k1ft")
